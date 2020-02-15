@@ -1,0 +1,40 @@
+﻿@model EditoraMazzoni.WebMvc.Web.Models.ContatoModelView
+
+
+
+@{
+    ViewBag.Title = "Contato";
+}
+
+<h2>Contato</h2>
+<br />
+
+@if (ViewBag.MensagemEnviada != null)
+{
+    <sript typeof="text/ javascrit">
+        alert(@ViewBag.MensagemEnviada)
+    </sript>
+}
+
+
+<form action="/Inicio/Contato" method="post">
+    <div class="form-group">
+        <label>Nome</label>
+        <input type="text" class="form-control" id="Nome" name="Nome" placeholder="Digite seu nome">
+    </div>
+    <div class="form-group">
+        <label>Assunto</label>
+        <input type="text" class="form-control" id="Assunto" name="Assunto" placeholder="Digite o assunto">
+    </div>
+    <div class="form-group">
+        <label for="Email">Endereço de e-mail</label>
+        <input type="email" class="form-control" id="Email" name="Email" placeholder="Digite o e-mail">
+    </div>
+    <div class="form-group">
+        <label for="Mensagem">Mensagem</label>
+        <textarea class="form-control" rows="3" id="Mensagem" name="Mensagem"></textarea>
+    </div>
+    <div>
+        <button class="btn btn-primary" id="EnviarContato" value="Enviar">Enviar</button>
+    </div>
+</form>
